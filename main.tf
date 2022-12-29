@@ -39,7 +39,7 @@ provider "nutanix" {
 TH: This is the prefix that will be added to the created VMs.  Replace this with your initials.
 */
 locals {
-    prefix_for_created_entities = "BWE"
+  prefix_for_created_entities = "OOPS"
 }
 
 #################################################################################
@@ -60,7 +60,7 @@ data "nutanix_clusters" "clusters" {
 TH: Create a data source for the "Primary" subnet
 */
 data "nutanix_subnet" "Primary" {
-    subnet_name = "Primary"
+  subnet_name = "Primary"
 }
 
 /*
@@ -86,8 +86,7 @@ TH: Define the location for the image to be used for creating the VM.
 */
 resource "nutanix_image" "Terraform-CentOS7" {
   name        = "${local.prefix_for_created_entities}-Terraform-CentOS7"
-  #source_uri  = "http://10.42.194.11/workshop_staging/CentOS7.qcow2"
-  source_uri  = "https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2"
+  source_uri  = "http://10.42.194.11/workshop_staging/CentOS7.qcow2"
   description = "${local.prefix_for_created_entities} Terraform-CentOS7 qcow image"
 }
 
@@ -95,15 +94,15 @@ resource "nutanix_image" "Terraform-CentOS7" {
 TH: This section contains all the details related to the VMs being built.
 */
 resource "nutanix_virtual_machine" "terraform-vm" {
-  count = 10
+  count                = 5
   name                 = "${local.prefix_for_created_entities}_terraform-vm_${count.index}"
   description          = "${local.prefix_for_created_entities}_terraform-vm_${count.index}"
   num_vcpus_per_socket = 2
   num_sockets          = 1
   memory_size_mib      = 4096
-  cluster_uuid = local.cluster1
+  cluster_uuid         = local.cluster1
   nic_list {
-    subnet_uuid = data.nutanix_subnet.Primary.id 
+    subnet_uuid = data.nutanix_subnet.Primary.id
   }
   disk_list {
     data_source_reference = {
