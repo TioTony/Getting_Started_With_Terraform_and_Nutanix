@@ -6,7 +6,7 @@ terraform {
   required_providers {
     nutanix = {
       source  = "nutanix/nutanix"
-      version = "1.7.0"
+      version = "1.7.1"
     }
   }
 }
@@ -78,7 +78,7 @@ Change the "0" to "1" if the following error is presented during terraform plan 
      }
 */
 locals {
-  cluster1 = data.nutanix_clusters.clusters.entities[0].metadata.uuid
+  cluster1 = data.nutanix_clusters.clusters.entities[1].metadata.uuid
 }
 
 /*
