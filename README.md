@@ -14,7 +14,7 @@
 
 ## How to use these files
 1. Login to the CentoOS VM that was created
-    - ssh nutanix@<IP address>
+    - ssh nutanix@xxx.xxx.xxx.xxx
     - Password is "nutanix/4u"
 2. cd /home/nutanix/Getting_Started_With_Terraform_and_Nutanix
 3. Edit the main.tf and change the "prefix_for_created_entities = " entry to your initials
