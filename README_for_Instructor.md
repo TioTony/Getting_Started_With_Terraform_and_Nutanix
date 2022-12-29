@@ -18,4 +18,5 @@
 5. Run 'terrform plan'
 6. Run 'terraform apply -auto-approve'
 NOTE: At this step it is ready for use by the participants who should follow README.md
+NOTE: Check the comments in the code if any errors are encountered.  Open a bug if the issue is not documented in the code.
 7. To clean up at the end of the class, run 'terraform destroy -auto-approve' and everthing created by Terraform will be removed.  
