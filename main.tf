@@ -28,8 +28,8 @@ provider "nutanix" {
   username            = "admin"
   password            = "nx2Tech714!"
   port                = 9440
-  endpoint            = "10.38.3.137"
-  foundation_endpoint = "10.38.3.137"
+  endpoint            = "10.42.18.39"
+  foundation_endpoint = "10.42.18.39"
   foundation_port     = 8000
   insecure            = true
   wait_timeout        = 30
@@ -86,8 +86,8 @@ TH: Define the location for the image to be used for creating the VM.
 */
 resource "nutanix_image" "Terraform-CentOS7" {
   name        = "${local.prefix_for_created_entities}-Terraform-CentOS7"
-  source_uri  = "http://10.42.194.11/workshop_staging/CentOS7.qcow2"
-  # source_uri  = "https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2"
+  #source_uri  = "http://10.42.194.11/workshop_staging/CentOS7.qcow2"
+  source_uri  = "https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2"
   description = "${local.prefix_for_created_entities} Terraform-CentOS7 qcow image"
 }
 
