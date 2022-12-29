@@ -13,7 +13,7 @@
     - download the terraform scripts
 
 ## How to use these files
-1. Login to the CentoOS VM that was created
+1. Login to the CentoOS VM that was created on the Nutanix Cluster
     - ssh nutanix@xxx.xxx.xxx.xxx
     - Password is "nutanix/4u"
 2. cd /home/nutanix/Getting_Started_With_Terraform_and_Nutanix
@@ -25,7 +25,7 @@
 NOTE: There may be a time gap between the time all items are built in Prism Central and the time Terraform thinks it is done.
     Give it a while, it will eventually figure it out.  This can take as long as 30 minutes.
 
-6. To clean up, run 'terraform destroy -auto-approve' and everthing created by Terraform will be removed.  
+7. To clean up, run 'terraform destroy -auto-approve' and everthing created by Terraform will be removed.  
 
 Nice work!  The examples in the my other github repos are a great next step now that you have the basics figured out.
 

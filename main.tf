@@ -94,7 +94,7 @@ resource "nutanix_image" "Terraform-CentOS7" {
 TH: This section contains all the details related to the VMs being built.
 */
 resource "nutanix_virtual_machine" "terraform-vm" {
-  count                = 5
+  count                = 3
   name                 = "${local.prefix_for_created_entities}_terraform-vm_${count.index}"
   description          = "${local.prefix_for_created_entities}_terraform-vm_${count.index}"
   num_vcpus_per_socket = 2
