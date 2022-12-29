@@ -14,27 +14,18 @@
 
 ## How to use these files
 1. Login to the CentoOS VM that was created
-2. ? CD to some directory?
-3. At the command prompt run 'terraform init'.  This will download the provider to your machine.
-4. Run 'terrform plan'
-    It should list a bunch of stuff with this at the end:
-    
-    Plan: 3 to add, 0 to change, 0 to destroy.
-
-4. Run 'terraform apply -auto-approve'
-    Sit back and watch everything get built in Prism Central.
-    In Prism Central:
-        Compute & Storage -> Images: Look for the "Terraform-CentOS7" image
-        Comptue & Storage -> VMs: Look for "terraform-vm".  The console login is user:root password: nutanix/4u
+    - ssh nutanix@<IP address>
+    - Password is "nutanix/4u"
+2. cd /home/nutanix/Getting_Started_With_Terraform_and_Nutanix
+3. Edit the main.tf and change the "prefix_for_created_entities = " entry to your initials
+4. At the command prompt run 'terraform init'.  
+5. Run 'terrform plan'
+6. Run 'terraform apply -auto-approve'
 
 NOTE: There may be a time gap between the time all items are built in Prism Central and the time Terraform thinks it is done.
     Give it a while, it will eventually figure it out.  This can take as long as 30 minutes.
 
-5. Run 'terraform destroy -auto-approve' and everthing created by Terraform will be removed.  
-    Reconfirm by looking for the entities in Prism Central and they should no longer be present:
-        Compute & Storage -> Images: Look for the "Terraform-CentOS7" image
-        Comptue & Storage -> VMs: Look for "terraform-vm".  
-    This should run much faster than the "apply".
+6. To clean up, run 'terraform destroy -auto-approve' and everthing created by Terraform will be removed.  
 
 Nice work!  The examples in the github repo are a great next step now that you have the basics figured out.
 
