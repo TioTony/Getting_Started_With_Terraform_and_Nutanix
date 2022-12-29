@@ -27,7 +27,7 @@ NOTE: There may be a time gap between the time all items are built in Prism Cent
 
 6. To clean up, run 'terraform destroy -auto-approve' and everthing created by Terraform will be removed.  
 
-Nice work!  The examples in the github repo are a great next step now that you have the basics figured out.
+Nice work!  The examples in the my other github repos are a great next step now that you have the basics figured out.
 
 ## Other Notes
 
