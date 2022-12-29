@@ -1,10 +1,10 @@
-# Getting_Started_With_Terraform_and_Nutanix
+# Getting started with Terraform and Nutanix
 
-## What you need to get started:
+## What you need to get started
 1. A Nutanix Cluster running AHV and Prism Central
 2. A subnet named "Primary"
 
-## Here is what it does:
+## Here is what it does
 1. Uploads a CentOS7 image
 2. Builds a VM
 3. Runs cloudinit script to setup the following:
@@ -12,7 +12,7 @@
     - terraform
     - download the terraform scripts
 
-## How to use these files:
+## How to use these files
 1. Login to the CentoOS VM that was created
 2. ? CD to some directory?
 3. At the command prompt run 'terraform init'.  This will download the provider to your machine.
