@@ -10,3 +10,7 @@ ssh_pwauth: true"
 packages:
   - git
   - terraform
+runcmd:
+  - mkdir /home/nutanix/Getting_Started_With_Terraform_and_Nutanix
+  - chwon nutanix:nutanix /home/nutanix/Getting_Started_With_Terraform_and_Nutanix
+  - git clone https://github.com/TioTony/Getting_Started_With_Terraform_and_Nutanix /home/nutanix/Getting_Started_With_Terraform_and_Nutanix
