@@ -40,4 +40,4 @@ Nice work!  The examples in the github repo are a great next step now that you h
 
 ## Other Notes
 
-This was created by Tony Hughes (aka TH in the comments) to provide a quick introduction to using Terraform with Nutanix in less than 100 lines of code.
+This was created by Tony Hughes (aka TH in the comments) to provide a quick introduction to using Terraform with Nutanix in about 100 lines of code.
