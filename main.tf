@@ -26,7 +26,7 @@ wait_timeout: No change needed.
 */
 provider "nutanix" {
   username            = "admin"
-  password            = "nx2Tech590!"
+  password            = "nx2Tech714!"
   port                = 9440
   endpoint            = "10.38.46.39"
   foundation_endpoint = "10.38.46.39"
