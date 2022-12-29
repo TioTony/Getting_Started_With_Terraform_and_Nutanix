@@ -9,8 +9,10 @@ chpasswd:
 ssh_pwauth: true"
 packages:
   - git
-  - terraform
 runcmd:
+  - yum install -y yum-utils
+  - yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+  - yum install -y terraform
   - mkdir /home/nutanix/Getting_Started_With_Terraform_and_Nutanix
-  - chwon nutanix:nutanix /home/nutanix/Getting_Started_With_Terraform_and_Nutanix
   - git clone https://github.com/TioTony/Getting_Started_With_Terraform_and_Nutanix /home/nutanix/Getting_Started_With_Terraform_and_Nutanix
+  - chown -R nutanix:nutanix /home/nutanix/Getting_Started_With_Terraform_and_Nutanix

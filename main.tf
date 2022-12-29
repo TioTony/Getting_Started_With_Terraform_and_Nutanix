@@ -85,10 +85,10 @@ locals {
 TH: Define the location for the image to be used for creating the VM.
 */
 resource "nutanix_image" "Terraform-CentOS7" {
-  name        = "${var.prefix_for_created_entities}-Terraform-CentOS7"
-  # source_uri  = "http://10.42.194.11/workshop_staging/CentOS7.qcow2"
-  source_uri  = "https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2"
-  description = "${var.prefix_for_created_entities} Terraform-CentOS7 qcow image"
+  name        = "${local.prefix_for_created_entities}-Terraform-CentOS7"
+  source_uri  = "http://10.42.194.11/workshop_staging/CentOS7.qcow2"
+  # source_uri  = "https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud.qcow2"
+  description = "${local.prefix_for_created_entities} Terraform-CentOS7 qcow image"
 }
 
 /*
@@ -96,8 +96,8 @@ TH: This section contains all the details related to the VMs being built.
 */
 resource "nutanix_virtual_machine" "terraform-vm" {
   count = 10
-  name                 = "${var.prefix_for_created_entities}terraform-vm_${count.index}"
-  description          = "${var.prefix_for_created_entities}terraform-vm_${count.index}"
+  name                 = "${local.prefix_for_created_entities}_terraform-vm_${count.index}"
+  description          = "${local.prefix_for_created_entities}_terraform-vm_${count.index}"
   num_vcpus_per_socket = 2
   num_sockets          = 1
   memory_size_mib      = 4096
@@ -118,4 +118,5 @@ resource "nutanix_virtual_machine" "terraform-vm" {
       device_type = "DISK"
     }
   }
+  guest_customization_cloud_init_user_data = filebase64("./cloudinit.yaml")
 }
