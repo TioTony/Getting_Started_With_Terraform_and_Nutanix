@@ -28,8 +28,8 @@ provider "nutanix" {
   username            = "admin"
   password            = "nx2Tech714!"
   port                = 9440
-  endpoint            = "10.38.46.39"
-  foundation_endpoint = "10.38.46.39"
+  endpoint            = "10.38.3.137"
+  foundation_endpoint = "10.38.3.137"
   foundation_port     = 8000
   insecure            = true
   wait_timeout        = 30
