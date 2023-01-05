@@ -10,6 +10,7 @@
 ## How to use these files
 1. Clone this repo to your Terraform workstation
 3. Edit the main.tf
+   - Update the cluster IP, password and other details
    - change the "prefix_for_created_entities = " to a value that will be prepended to all VMs created 
    - change the "count = " to match the number of participants
          NOTE: The Nutanix HPOC "Primary" subnet has approximately 50 usable IP addresses.  Each participant will spin up at least 3 VMs.  A practical limit is 10 users per cluster (10 IPs for VMs created by the instructor for participants to use + 3 VMs * 10 Partipants = 40 IPs)
