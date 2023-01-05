@@ -95,8 +95,8 @@ TH: This section contains all the details related to the VMs being built.
 */
 resource "nutanix_virtual_machine" "terraform-vm" {
   count                = 3
-  name                 = "${local.prefix_for_created_entities}_terraform-vm_${count.index}"
-  description          = "${local.prefix_for_created_entities}_terraform-vm_${count.index}"
+  name                 = "${local.prefix_for_created_entities}_${count.index}_terraform-vm"
+  description          = "${local.prefix_for_created_entities}_${count.index}_terraform-vm"
   num_vcpus_per_socket = 2
   num_sockets          = 1
   memory_size_mib      = 4096
