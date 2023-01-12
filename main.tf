@@ -39,7 +39,7 @@ provider "nutanix" {
 TH: This is the prefix that will be added to the created VMs.  Replace this with your initials.
 */
 locals {
-  prefix_for_created_entities = "OOPS"
+  prefix_for_created_entities = "Party_Leader_"
 }
 
 #################################################################################
@@ -61,6 +61,10 @@ TH: Create a data source for the "Primary" subnet
 */
 data "nutanix_subnet" "Primary" {
   subnet_name = "Primary"
+    additional_filter {
+    name   = "cluster_reference.uuid"
+    values = ["${local.cluster1}"]
+  }
 }
 
 /*
@@ -94,7 +98,7 @@ resource "nutanix_image" "Terraform-CentOS7" {
 TH: This section contains all the details related to the VMs being built.
 */
 resource "nutanix_virtual_machine" "terraform-vm" {
-  count                = 3
+  count                = 5
   name                 = "${local.prefix_for_created_entities}_${count.index}_terraform-vm"
   description          = "${local.prefix_for_created_entities}_${count.index}_terraform-vm"
   num_vcpus_per_socket = 2
