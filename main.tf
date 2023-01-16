@@ -28,8 +28,8 @@ provider "nutanix" {
   username            = "admin"
   password            = "nx2Tech714!"
   port                = 9440
-  endpoint            = "10.55.45.39"
-  foundation_endpoint = "10.55.45.39"
+  endpoint            = "10.42.72.39"
+  foundation_endpoint = "10.42.72.39"
   foundation_port     = 8000
   insecure            = true
   wait_timeout        = 30
@@ -39,7 +39,7 @@ provider "nutanix" {
 TH: This is the prefix that will be added to the created VMs.  Replace this with your initials.
 */
 locals {
-  prefix_for_created_entities = "Party_Leader_"
+  prefix_for_created_entities = "BWE1"
 }
 
 #################################################################################
