@@ -39,7 +39,7 @@ provider "nutanix" {
 TH: This is the prefix that will be added to the created VMs.  Replace this with your initials.
 */
 locals {
-  prefix_for_created_entities = "BWE1"
+  prefix_for_created_entities = "OOPS"
 }
 
 #################################################################################
